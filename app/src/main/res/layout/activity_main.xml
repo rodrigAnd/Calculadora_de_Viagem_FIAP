@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/container_superior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:id="@+id/container_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/calculadora_de_viagem"
+                style="@style/title_text_principal"
+                android:text="Calculadora de Viagem" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/ed_distancia_a_ser_percorrida"
+            style="@style/edit_text_format"
+            android:hint="Distância a ser percorrida" />
+
+        <TextView
+            android:id="@+id/total_de_km"
+            style="@style/text_view_format"
+            android:text="Total de KM" />
+
+
+        <EditText
+            android:id="@+id/ed_valor_do_combustivel"
+            style="@style/edit_text_format"
+            android:hint="Valor do Combustível" />
+
+        <TextView
+            android:id="@+id/tv_distancia_a_ser_percorrida"
+            style="@style/text_view_format"
+            android:text="Preço por Litro" />
+
+        <EditText
+            android:id="@+id/ed_autonomia"
+            style="@style/edit_text_format"
+            android:hint="Autonomia" />
+
+        <TextView
+            android:id="@+id/tv_km_por_litro"
+            style="@style/text_view_format"
+            android:text="Km's por Litro" />
+
+        <Button
+            android:id="@+id/btn_calcular"
+            style="@style/btn_calcular_format"
+            android:text="Calcular" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/container_inferior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="#22ECC6DB">
+
+        <LinearLayout
+            android:id="@+id/container_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_moeda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$"
+                android:textColor="@color/red"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_valor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:inputType="number"
+                tools:text="1000.00" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_texto_componente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/container_valor"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_valor_gasto_na_viagem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ESSE SERÁ SEU GASTO NA VIAGEM"
+
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
